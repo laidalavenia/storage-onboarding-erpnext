@@ -8,6 +8,45 @@ app_license = "mit"
 # Apps
 # ------------------
 
+fixtures = [
+    {"dt": "Workflow", "filters": [["name", "=", "Storage Onboarding Workflow"]]},
+    {
+        "dt": "Workflow State",
+        "filters": [
+            [
+                "name",
+                "in",
+                [
+                    "Draft",
+                    "Pending Approval",
+                    "Approved",
+                    "Rejected",
+                    "Ready for Agreement",
+                    "Closed",
+                ],
+            ]
+        ],
+    },
+    {
+        "dt": "Workflow Action Master",
+        "filters": [
+            [
+                "name",
+                "in",
+                [
+                    "Submit for Approval",
+                    "Approve",
+                    "Reject",
+                    "Revise",
+                    "Ready for Agreement",
+                    "Close",
+                ],
+            ]
+        ],
+    },
+    {"dt": "Custom Field", "filters": [["dt", "=", "Storage Onboarding Case"]]},
+]
+
 # required_apps = []
 
 # Each item in the list will be shown as an app in the apps page
@@ -246,4 +285,3 @@ app_license = "mit"
 # ------------
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
-

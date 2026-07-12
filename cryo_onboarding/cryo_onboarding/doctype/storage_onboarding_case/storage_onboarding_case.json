@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "SOC-.YYYY.-.#####",
  "creation": "2026-07-12 14:48:08.064956",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -48,10 +49,11 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-07-12 14:55:53.649607",
+ "modified": "2026-07-12 22:59:36.136980",
  "modified_by": "Administrator",
  "module": "Cryo Onboarding",
  "name": "Storage Onboarding Case",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

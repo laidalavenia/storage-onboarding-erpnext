@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "OAL-.YYYY.-.#####",
  "creation": "2026-07-12 14:57:55.965045",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -55,10 +56,11 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-07-12 15:29:25.637864",
+ "modified": "2026-07-12 23:01:37.203690",
  "modified_by": "Administrator",
  "module": "Cryo Onboarding",
  "name": "Onboarding Audit Log",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

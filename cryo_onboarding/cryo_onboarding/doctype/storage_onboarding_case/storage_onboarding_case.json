@@ -1,0 +1,75 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-07-12 14:48:08.064956",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "customer",
+  "sales_officer",
+  "requested_packages",
+  "total_amount",
+  "transition_reason"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sales_officer",
+   "fieldtype": "Link",
+   "label": "Sales Officer",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "requested_packages",
+   "fieldtype": "Table",
+   "label": "Requested Packages",
+   "options": "Storage Package Request"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "transition_reason",
+   "fieldtype": "Small Text",
+   "label": "Transition Reason"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-07-12 14:55:53.649607",
+ "modified_by": "Administrator",
+ "module": "Cryo Onboarding",
+ "name": "Storage Onboarding Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -9,6 +9,19 @@ app_license = "mit"
 # ------------------
 
 fixtures = [
+    # Roles
+    {
+        "dt": "Role",
+        "filters": [["name", "in", ["Sales Officer", "Operations Manager"]]],
+    },
+    # Document-level permissions 
+    {
+        "dt": "Custom DocPerm",
+        "filters": [
+            ["parent", "in", ["Storage Onboarding Case", "Onboarding Audit Log"]]
+        ],
+    },
+    # Workflow
     {"dt": "Workflow", "filters": [["name", "=", "Storage Onboarding Workflow"]]},
     {
         "dt": "Workflow State",
@@ -44,6 +57,7 @@ fixtures = [
             ]
         ],
     },
+    # Custom Field workflow_state (auto-created by Workflow)
     {"dt": "Custom Field", "filters": [["dt", "=", "Storage Onboarding Case"]]},
 ]
 

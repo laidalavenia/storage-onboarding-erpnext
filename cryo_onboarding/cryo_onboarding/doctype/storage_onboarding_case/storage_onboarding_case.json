@@ -43,13 +43,14 @@
   {
    "fieldname": "transition_reason",
    "fieldtype": "Small Text",
-   "label": "Transition Reason"
+   "label": "Transition Reason",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-07-12 22:59:36.136980",
+ "modified": "2026-07-14 09:19:19.621294",
  "modified_by": "Administrator",
  "module": "Cryo Onboarding",
  "name": "Storage Onboarding Case",

@@ -27,3 +27,17 @@ def get_case_state_and_history(case: str):
         "total_amount": case_doc.total_amount,
         "history": history,
     }
+
+
+def apply_transition(case: str, action: str, reason: str = None):
+    """Apply a workflow action and record the reason in the audit log.
+    Reason is passed explicitly (not stored on the doc), so no dirty state on the client.
+    """
+    from frappe.model.workflow import apply_workflow
+
+    doc = frappe.get_doc("Storage Onboarding Case", case)
+
+    # stash reason on the in-memory doc so on_update can read it (not persisted as a field change by client)
+    doc.flags.transition_reason = reason
+    apply_workflow(doc, action)
+    return doc.workflow_state
